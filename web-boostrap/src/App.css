@@ -1,0 +1,125 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #212529;
+  color: white;
+  padding: 1rem;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #212529;
+  padding: 1rem;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: #343a40;
+  color: white;
+}
+
+.widget {
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* src/App.css */
+
+.button-equal-size {
+  border: 1px solid #198754 !important; /* Color del borde */
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: white !important; /* Color de texto al hacer hover */
+  padding: 10px 20px; /* Ajuste del tamaño de los botones */
+  width: 100%; /* Asegura que todos los botones ocupen el ancho completo de su contenedor */
+  text-align: center; /* Centra el texto dentro de los botones */
+  box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total del elemento */
+}
+.button-equal-size-back{
+  border: 1px solid #dc3545 !important; /* Color del borde */
+  color: #dc3545 !important;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px 20px; /* Ajuste del tamaño de los botones */
+  width: 100%; /* Asegura que todos los botones ocupen el ancho completo de su contenedor */
+  text-align: center; /* Centra el texto dentro de los botones */
+  box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total del elemento */
+}
+
+.button-equal-size-back:hover{
+  background-color: #dc3545 !important; /* Color de fondo al hacer hover */
+  color: white !important; /* Color de texto al hacer hover */
+  text-decoration: none; /* Quitar subrayado al hacer hover */
+}
+.button-equal-size:hover {
+  background-color: #198754 !important; /* Color de fondo al hacer hover */
+  color: white !important; /* Color de texto al hacer hover */
+  text-decoration: none; /* Quitar subrayado al hacer hover */
+}
+/* Estilos para el componente Widget */
+.card {
+  border-radius: 10px; /* Añade esquinas redondeadas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-body {
+  padding: 20px; /* Espaciado interno */
+}
+
+/*Tabla*/
+.table-custom {
+  background-color: #000; /* Fondo negro */
+  border: 2px solid #28a745; /* Borde verde */
+  border-radius: 15px; /* Radio del borde */
+  color: #28a745; /* Letras verdes */
+}
+
+.table-custom th,
+.table-custom td {
+  border: 1px solid #28a745; /* Borde verde para celdas */
+}
+
+.table-custom .thead-dark th {
+  background-color: #28a745; /* Fondo verde para títulos */
+  color: #000; /* Texto negro */
+}
+
+.btn-custom {
+  border-color: #28a745; /* Borde verde */
+  color: white; /* Texto blanco */
+  background-color: #28a745; /* Fondo verde */
+}
+
+.btn-custom:hover {
+  background-color: #218838; /* Fondo verde oscuro al pasar el mouse */
+  border-color: #1e7e34; /* Borde verde oscuro al pasar el mouse */
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #28a745;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  color: #218838;
+}
