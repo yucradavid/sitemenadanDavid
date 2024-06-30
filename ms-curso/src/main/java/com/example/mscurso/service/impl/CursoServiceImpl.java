@@ -1,9 +1,9 @@
-package com.example.msgestion_estudiantes.service.impl;
+package com.example.mscurso.service.impl;
 
 
-import com.example.msgestion_estudiantes.entity.Curso;
-import com.example.msgestion_estudiantes.repository.CursoRepository;
-import com.example.msgestion_estudiantes.service.CursoService;
+import com.example.mscurso.entity.Curso;
+import com.example.mscurso.repository.CursoRepository;
+import com.example.mscurso.service.CursoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

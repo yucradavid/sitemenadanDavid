@@ -1,4 +1,4 @@
-package com.example.msgestion_estudiantes;
+package com.example.mscurso;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

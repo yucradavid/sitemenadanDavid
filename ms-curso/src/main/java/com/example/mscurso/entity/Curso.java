@@ -1,9 +1,7 @@
-package com.example.msgestion_estudiantes.entity;
+package com.example.mscurso.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.Date;
 
 @Entity
 @Data

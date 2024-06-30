@@ -1,7 +1,7 @@
-package com.example.msgestion_estudiantes.service;
+package com.example.mscurso.service;
 
 
-import com.example.msgestion_estudiantes.entity.Curso;
+import com.example.mscurso.entity.Curso;
 
 import org.springframework.stereotype.Service;
 

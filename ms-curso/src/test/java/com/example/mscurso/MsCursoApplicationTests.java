@@ -1,10 +1,10 @@
-package com.example.msgestion_docentes;
+package com.example.mscurso;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsGestionDocentesApplicationTests {
+class MsCursoApplicationTests {
 
 	@Test
 	void contextLoads() {

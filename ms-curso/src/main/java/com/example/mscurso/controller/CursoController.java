@@ -1,8 +1,8 @@
-package com.example.msgestion_estudiantes.controller;
+package com.example.mscurso.controller;
 
 
-import com.example.msgestion_estudiantes.entity.Curso;
-import com.example.msgestion_estudiantes.service.CursoService;
+import com.example.mscurso.entity.Curso;
+import com.example.mscurso.service.CursoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

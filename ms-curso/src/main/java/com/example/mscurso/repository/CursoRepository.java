@@ -1,7 +1,7 @@
-package com.example.msgestion_estudiantes.repository;
+package com.example.mscurso.repository;
 
 
-import com.example.msgestion_estudiantes.entity.Curso;
+import com.example.mscurso.entity.Curso;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

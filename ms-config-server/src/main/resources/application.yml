@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/EnriqueMV18/MS-PRUEBAS.git # ruta del repositorio git
+          uri: https://github.com/yucradavid/sitemenadanDavid.git # ruta del repositorio git
           searchPaths: config-data
           #username:
           #password:
