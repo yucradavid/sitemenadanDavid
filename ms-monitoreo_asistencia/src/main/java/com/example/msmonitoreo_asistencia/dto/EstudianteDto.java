@@ -15,9 +15,7 @@ public class EstudianteDto {
     private String email;
     private String gradoActual;
 
-
-
-
+    private DocenteDto docente;
 
 
 }

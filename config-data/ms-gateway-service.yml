@@ -27,6 +27,10 @@ spring:
         locator:
           enable: true
       routes:
+        - id: ms-curso-service
+          uri: lb://ms-curso-service
+          predicates:
+            - Path=/curso/**
         - id: ms-calificacion-service
           uri: lb://ms-calificacion-service
           predicates:

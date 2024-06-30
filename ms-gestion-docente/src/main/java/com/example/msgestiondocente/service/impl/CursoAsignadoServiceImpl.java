@@ -2,9 +2,7 @@ package com.example.msgestiondocente.service.impl;
 
 
 
-import com.example.msgestiondocente.dto.CursoAsignadoDto;
 import com.example.msgestiondocente.entity.CursoAsignado;
-import com.example.msgestiondocente.entity.Docente;
 import com.example.msgestiondocente.repository.CursoAsignadoRepository;
 import com.example.msgestiondocente.service.CursoAsignadoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,16 +21,7 @@ public class CursoAsignadoServiceImpl implements CursoAsignadoService {
     }
 
     @Override
-    public CursoAsignado guardar(CursoAsignadoDto cursoAsignadoDto) {
-        CursoAsignado cursoAsignado = new CursoAsignado();
-        Docente docente = new Docente();
-        docente.setId(cursoAsignadoDto.getDocente_id());
-        System.out.println("=====================");
-        System.out.println(docente.toString());
-        cursoAsignado.setNombreCurso(cursoAsignadoDto.getNombreCurso());
-        cursoAsignado.setHorasAcademicas(cursoAsignadoDto.getHorasAcademicas());
-        cursoAsignado.setDetallesDocente(docente);
-        System.out.println(cursoAsignado.toString());
+    public CursoAsignado guardar(CursoAsignado cursoAsignado) {
         return cursoAsignadoRepository.save(cursoAsignado);
     }
 
@@ -42,15 +31,7 @@ public class CursoAsignadoServiceImpl implements CursoAsignadoService {
     }
 
     @Override
-    public CursoAsignado actualizar(CursoAsignadoDto cursoAsignadoDto) {
-
-        CursoAsignado cursoAsignado = new CursoAsignado();
-        Docente docente = new Docente();
-        docente.setId(cursoAsignadoDto.getDocente_id());
-        System.out.println("=====================");
-        System.out.println(docente.toString());
-        cursoAsignado.setNombreCurso(cursoAsignadoDto.getNombreCurso());
-        cursoAsignado.setHorasAcademicas(cursoAsignadoDto.getHorasAcademicas());
+    public CursoAsignado actualizar(CursoAsignado cursoAsignado) {
         return cursoAsignadoRepository.save(cursoAsignado);
     }
 

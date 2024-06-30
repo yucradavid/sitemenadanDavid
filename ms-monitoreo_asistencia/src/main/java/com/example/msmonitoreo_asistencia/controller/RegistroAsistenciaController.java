@@ -4,8 +4,6 @@ package com.example.msmonitoreo_asistencia.controller;
 import com.example.msmonitoreo_asistencia.entity.RegistroAsistencia;
 import com.example.msmonitoreo_asistencia.service.RegistroAsistenciaService;
 
-
-import com.itextpdf.text.DocumentException;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -29,30 +27,31 @@ public class RegistroAsistenciaController {
     private RegistroAsistenciaService registroAsistenciaService;
 
     @GetMapping
-    ResponseEntity<List<RegistroAsistencia>> lista(){
-        return ResponseEntity.ok(registroAsistenciaService.lista());
-    }
-    @PostMapping
-    ResponseEntity<RegistroAsistencia> guardar(@RequestBody RegistroAsistencia registroAsistencia) {
-        return ResponseEntity.ok(registroAsistenciaService.guardar((registroAsistencia)));
+    public List<RegistroAsistencia> getAllRegistroAsistencias() {
+        return registroAsistenciaService.getAllAsistenciasRegistroAsistencias();
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<RegistroAsistencia> buscarPorId(@PathVariable(required = true) Integer id){
-        return ResponseEntity.ok(registroAsistenciaService.buscarPorId(id).get());
-
+    public ResponseEntity<RegistroAsistencia> getRegistroAsistenciaId(@PathVariable Integer id) {
+        RegistroAsistencia asistencia = registroAsistenciaService.getRegistroAsistenciaId(id);
+        return ResponseEntity.ok(asistencia);
     }
 
-    @PutMapping
-    ResponseEntity<RegistroAsistencia> actualizar(@RequestBody RegistroAsistencia registroAsistencia){
-        return ResponseEntity.ok(registroAsistenciaService.actualizar((registroAsistencia)));
+    @PostMapping
+    public ResponseEntity<RegistroAsistencia> createRegistroAsistencia(@RequestBody RegistroAsistencia registroAsistencia) {
+        RegistroAsistencia newAsistencia = registroAsistenciaService.createAsistenciaRegistroAsistencia(registroAsistencia);
+        return new ResponseEntity<>(newAsistencia, HttpStatus.CREATED);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<RegistroAsistencia> updateAsistenciaRegistroAsistencia(@PathVariable Integer id, @RequestBody RegistroAsistencia registroAsistencia) {
+        RegistroAsistencia updatedAsistenciaAsistencia = registroAsistenciaService.updateAsistenciaRegistroAsistencia(id, registroAsistencia);
+        return ResponseEntity.ok(updatedAsistenciaAsistencia);
+    }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<List<RegistroAsistencia>> eleminar(@PathVariable(required = true) Integer id){
-        registroAsistenciaService.eleminar(id);
-        return ResponseEntity.ok(registroAsistenciaService.lista());
-
+    public ResponseEntity<Void> deleteAsistencia(@PathVariable Integer id) {
+        registroAsistenciaService.deleteRegistroAsistencia(id);
+        return ResponseEntity.noContent().build();
     }
-
-
 }

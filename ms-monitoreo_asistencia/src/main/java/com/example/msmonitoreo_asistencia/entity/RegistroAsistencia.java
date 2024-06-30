@@ -15,15 +15,10 @@ public class RegistroAsistencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer estudianteId;
-    private Integer cursoId;
+
+    private Long estudianteId;
+    private Long cursoId;
     private LocalDate fecha;
-    private Boolean asistencia;
-
-    @Transient
-    private EstudianteDto estudianteDto; // No deberías tener este campo en la entidad
-
-
-
+    private Boolean presente;
 
 }

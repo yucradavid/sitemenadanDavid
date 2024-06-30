@@ -3,7 +3,6 @@ package com.example.msgestiondocente.service;
 
 
 
-import com.example.msgestiondocente.dto.CursoAsignadoDto;
 import com.example.msgestiondocente.entity.CursoAsignado;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +11,8 @@ import java.util.Optional;
 @Service
 public interface CursoAsignadoService {
     List<CursoAsignado> lista();
-    CursoAsignado guardar(CursoAsignadoDto cursoAsignadoDto);
+    CursoAsignado guardar(CursoAsignado cursoAsignado);
     Optional<CursoAsignado> buscarPorId(Integer id);
-    CursoAsignado actualizar(CursoAsignadoDto cursoAsignadoDto);
+    CursoAsignado actualizar(CursoAsignado cursoAsignado);
     void eleminar(Integer id);
 }

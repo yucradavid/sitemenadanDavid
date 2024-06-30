@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -12,20 +13,15 @@ import java.util.List;
 public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
     private String nombre;
-    private LocalDate fechaNacimiento;
-    private String DNI;
+    private String apellido;
+    private Date fechaNacimiento;
     private String direccion;
-    private String telefono;
-    private String email;
-    private String gradoActual;
 
 
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "estudiante_id")
-    private List<Historial_Académico> historialAcadémicos;
+
+
 
 
 }

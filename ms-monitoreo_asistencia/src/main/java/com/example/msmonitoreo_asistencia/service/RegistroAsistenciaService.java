@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Optional;
 @Service
 public interface RegistroAsistenciaService {
-    List<RegistroAsistencia> lista();
-    RegistroAsistencia guardar(RegistroAsistencia registroAsistencia);
-    Optional<RegistroAsistencia> buscarPorId(Integer id);
-    RegistroAsistencia actualizar(RegistroAsistencia registroAsistencia);
-    void eleminar(Integer id);
+    List<RegistroAsistencia> getAllAsistenciasRegistroAsistencias();
+    RegistroAsistencia getRegistroAsistenciaId(Integer id);
+    RegistroAsistencia createAsistenciaRegistroAsistencia(RegistroAsistencia registroAsistencia);
+    RegistroAsistencia updateAsistenciaRegistroAsistencia(Integer id, RegistroAsistencia registroAsistencia);
+    void deleteRegistroAsistencia(Integer id);
 }
